@@ -25,7 +25,7 @@ import org.springframework.test.context.ActiveProfiles;
 @RunWith(SpringRestPactRunner.class)
 @SpringBootTest(classes=PactContractProviderApplication.class,properties={"spring.profiles.active=test","spring.cloud.config.enabled=false"},webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
 @ActiveProfiles("test")
-//@PactBroker(host="localhost",port="8500")
+@PactBroker(host="localhost",port="8500")
 @Provider("inventory_provider")
 public class InventoryProviderTest {
 	
